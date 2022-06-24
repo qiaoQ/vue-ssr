@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav>
+      <router-link to="/">首页</router-link>
+      <router-link to="/detail">详情</router-link>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import dayjs from 'dayjs';
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  components: {},
+  mounted() {
+    dayjs().format();
   }
 }
 </script>
